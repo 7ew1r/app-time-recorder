@@ -15,11 +15,11 @@ namespace AppTimeRecorder
         }
 
         private string _BindText = "初期値";
-        public string BindText { 
+        public string BindProcessNameText { 
             get => _BindText;
             set {
                 _BindText = value;
-                NotifyPropertyChanged(nameof(BindText));
+                NotifyPropertyChanged(nameof(BindProcessNameText));
             }
         }
 

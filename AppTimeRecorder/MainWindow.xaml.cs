@@ -27,11 +27,11 @@ namespace AppTimeRecorder
     {
         private readonly MainViewModel mainViewModel = new MainViewModel
         {
-            BindText = "初期値",
-            BindAppNameText = "ああああ"
+            BindProcessNameText = "",
+            BindAppNameText = ""
         };
 
-        private Class1 class1 = new Class1();
+        private readonly AppInfoList appInfoList = new AppInfoList();
 
         public MainWindow()
         {
@@ -68,17 +68,17 @@ namespace AppTimeRecorder
             {
                 Dispatcher.Invoke(() =>
                 {
-                    var fileName = GetActiveWindowFileName();
-                    if (fileName == null)
+                    var processName = GetActiveWindowFileName();
+                    if (processName == null)
                     {
-                        mainViewModel.BindText = "null";
+                        mainViewModel.BindProcessNameText = "null";
                     }
                     else
                     {
-                        mainViewModel.BindText = fileName;
-                        mainViewModel.BindAppNameText = class1.GetAppNameFromProcessName(fileName);
+                        mainViewModel.BindProcessNameText = processName;
+                        mainViewModel.BindAppNameText = appInfoList.GetAppNameFromProcessName(processName);
                     }
-                    mainViewModel.NotifyPropertyChanged(nameof(MainViewModel.BindText));
+                    mainViewModel.NotifyPropertyChanged(nameof(MainViewModel.BindProcessNameText));
                 });
 
 

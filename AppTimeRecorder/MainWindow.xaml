@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="AppTimeRecorder" Height="300" Width="500">
     <Grid>
-        <Label Content="アクティブプロセス名" HorizontalAlignment="Left" Margin="29,23,0,0" VerticalAlignment="Top"/>
-        <Label Content="{Binding BindText}" HorizontalAlignment="Center" Margin="0,132,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.062,-0.082" FontSize="36"/>
-        <Label Content="{Binding BindAppNameText}" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top"/>
+        <Label Content="アクティブプロセス" HorizontalAlignment="Left" Margin="29,23,0,0" VerticalAlignment="Top"/>
+        <Label Content="{Binding BindAppNameText}" HorizontalAlignment="Center" Margin="0,66,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label Content="{Binding BindProcessNameText}" HorizontalAlignment="Center" Margin="0,173,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.062,-0.082" FontSize="22"/>
 
     </Grid>
 </Window>
